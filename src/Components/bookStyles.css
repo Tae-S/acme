@@ -1,0 +1,120 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.book-section{
+    /* border:1px solid red; */
+    height:20em;
+    margin:0 4em;
+    background:#FDEDD3;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.details{
+    /* border:1px solid red; */
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left:4em;
+}
+
+.details > .title{
+    font-size: 3em;
+    text-align: left;
+    /* border:1px solid black; */
+    display: inline-block;
+}
+
+.details > .desc{
+    text-align: left;
+    display: inline-block;
+    /* border:1px solid black; */
+    text-overflow: ellipsis;
+}
+
+.numbers{
+    border:1px solid rgba(0,0,0,0.1);
+    width:20em;
+    position: relative;
+    top:4em;
+    background:#fff;
+    border-radius: 10px;
+    padding-top:2em;
+    padding-bottom: 2em;
+    height:fit-content;
+}
+
+.numbers > p{
+    text-align: left;
+    padding: 10px 0;
+}
+
+.numbers > p > img{
+    margin-left:2em;
+    margin-right: 0.5em;
+}
+
+.numbers > hr{
+    /* display: inline-block; */
+    width:80%;
+    margin:auto;
+    border:1px solid rgba(0,0,0,0.1);
+}
+
+.number-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border:1px solid blue; */
+    margin:2em 2em;
+}
+
+.number-container > .number{
+    color:#19A14C;
+    font-weight:700;
+}
+
+.counter{
+    display:flex;
+    flex-direction: row;
+}
+
+.decrement,
+.increment,
+.counter-display{
+    background:#dbecff;
+    padding:4px 10px;
+    color:#2654B4;
+    margin-right:2px;
+    user-select: none;
+    font-weight:700;
+}
+
+.decrement{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor:pointer;
+}
+
+.increment{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor:pointer;
+}
+
+.add-to-basket{
+    background:#2654B4;
+    color:#fff;
+    width:12em;
+    border-radius:5px;
+    padding:10px 6px;
+    margin:auto;
+    font-weight: 600;
+    user-select: none;
+    cursor:pointer;
+}
