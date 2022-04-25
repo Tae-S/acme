@@ -105,8 +105,38 @@ header{
 
 .basket > span:nth-child(2){
     /* border:1px solid blue; */
+    position: absolute;
     padding:6px 12px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     background: #DAEBFF;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height:calc(2em + 1px);
+    top:1.6em;
+}
+
+
+.basket-anim{
+    /* height:2em; */
+    /* top:0; */
+    /* position: relative; */
+    
+    
+    
+    /* display: inline-block; */
+    /* animation: basket-anim 2s ease-in-out infinite; */
+    animation: basket-anim 2s cubic-bezier(0.280, 0.840, 0.420, 1) infinite;
+}
+
+@keyframes basket-anim {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-10px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
 }

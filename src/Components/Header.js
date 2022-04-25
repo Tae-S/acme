@@ -1,10 +1,21 @@
 import './headerStyles.css'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
+import { useSelector } from 'react-redux'
 
 function Header()
 {
+    const basketList = useSelector(state => state.basket.value)
+    useEffect(()=>{
+        const _basket = document.querySelector('.basket-item-count')
+        if(basketList.length > 0){
+            _basket.classList.add('basket-anim')
+        }
+        else{
+            _basket.classList.remove('basket-anim')
+        }
+    }, [basketList])
     return(
         <header>
             <ul className='nav-ul-left'>
@@ -35,7 +46,7 @@ function Header()
                         <span>
                             <img src={logo} alt='Shopping logo' />
                             Basket</span>
-                        <span>0</span>
+                        <span className='basket-item-count'>{basketList.length}</span>
                     </Link>
                 </li>
             </ul>
